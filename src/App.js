@@ -5,13 +5,14 @@ import Register from "./components/Register"
 import Login from "./components/Login"
 import Profile from "./components/Profile"
 import AddWorkout from "./components/AddWorkout"
+import AddExercise from "./components/AddExercise"
 
 
 function App() {
   return (
     <div className="App">
       <TopPart />
-      <AddWorkout />
+      <AddExercise />
     </div>
   );
 }

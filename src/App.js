@@ -8,6 +8,7 @@ import AddWorkout from "./components/AddWorkout"
 import AddExercise from "./components/AddExercise"
 import WorkoutDetail from "./components/WorkoutDetail"
 import Home from "./components/Home"
+import "./index.css"
 
 
 function App() {

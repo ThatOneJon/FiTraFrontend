@@ -9,7 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function TopPart(){
     return(
-        
+       
             <Navbar className ="customNav py-4" bg="dark" expand="md" variant="dark">
               <Container>
               <Navbar.Brand href="#home"><img src={require('./imgs/PICS/icon.jpg')} style={{borderRadius:"50%", width: "90px"}}/> </Navbar.Brand>

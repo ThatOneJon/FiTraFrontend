@@ -12,6 +12,7 @@ export default function TopPart(){
         
             <Navbar className ="customNav py-4" bg="dark" expand="md" variant="dark">
               <Container>
+              <Navbar.Brand href="#home"><img src={require('./imgs/PICS/icon.jpg')} style={{borderRadius:"50%", width: "90px"}}/> </Navbar.Brand>
                 <Navbar.Brand href="#home"><h1 style = {{fontSize: 60}}>FiTra</h1></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

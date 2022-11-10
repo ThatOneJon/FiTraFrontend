@@ -37,7 +37,6 @@ export default function WorkoutDetail(){
                                 <td>@mdo</td>
                                 <td>@mdo</td>
                                 <td>@mdo</td>
-
                             </tr>
                      </tbody>
                     </Table>

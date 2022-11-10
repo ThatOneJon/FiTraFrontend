@@ -31,3 +31,9 @@
   background-color: rgb(231, 231, 236);
   border-radius: 10px;
 }
+
+.textInputExercise>input::placeholder{
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}

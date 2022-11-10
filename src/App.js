@@ -6,13 +6,14 @@ import Login from "./components/Login"
 import Profile from "./components/Profile"
 import AddWorkout from "./components/AddWorkout"
 import AddExercise from "./components/AddExercise"
+import WorkoutDetail from "./components/WorkoutDetail"
 
 
 function App() {
   return (
     <div className="App">
       <TopPart />
-      <AddExercise />
+      <WorkoutDetail />
     </div>
   );
 }

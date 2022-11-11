@@ -8,14 +8,18 @@ import AddWorkout from "./components/AddWorkout"
 import AddExercise from "./components/AddExercise"
 import WorkoutDetail from "./components/WorkoutDetail"
 import Home from "./components/Home"
-import "./index.css"
 
 
 function App() {
+
+  const[menuItem, setMenuItem] = React.useState()
+
   return (
     <div className="App">
-      <TopPart />
-      <Home />
+      <TopPart menuItem={(i) => setMenuItem(i)} />
+      {menuItem === "home" && <Home />}
+      {menuItem === "register" && <Register />}
+      {menuItem === "login" && <Login />}
     </div>
   );
 }

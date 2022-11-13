@@ -9,6 +9,8 @@ import AddExercise from "./components/AddExercise"
 import WorkoutDetail from "./components/WorkoutDetail"
 import Home from "./components/Home"
 
+import{AuthProvider} from "./context/authContext"
+
 
 function App() {
 
@@ -17,9 +19,11 @@ function App() {
   return (
     <div className="App">
       <TopPart menuItem={(i) => setMenuItem(i)} />
-      {menuItem === "home" && <Home />}
-      {menuItem === "register" && <Register />}
-      {menuItem === "login" && <Login />}
+      <AuthProvider>
+        {menuItem === "home" && <Home />}
+        {menuItem === "register" && <Register />}
+        {menuItem === "login" && <Login />}
+      </AuthProvider>
     </div>
   );
 }

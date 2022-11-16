@@ -29,7 +29,6 @@ export default function Login(){
             'password':event.target.value
         }))
     }
-    console.log(loginData)
 
     return(
         <Container fluid="lg" className="mt-5 mb-4">
@@ -45,10 +44,11 @@ export default function Login(){
                             </InputGroup>
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formLoginPassword" name ="password">
+                        <Form.Group className="mb-3" controlId="formLoginPassword">
                             <Form.Label className="mt-3 customLabel">Password</Form.Label>
-                            <Form.Control size = "lg" type="password" placeholder="Password" style={{backgroundColor: "#edeef7"}} onChange={(event) => handleChange(event)} value={loginData.password}/>
+                            <Form.Control size = "lg" type="password" placeholder="Password" style={{backgroundColor: "#edeef7"}} onChange={(event) => handleChange(event)} value={loginData.password} name="password"/>
                         </Form.Group>
+
                         <Button variant="dark" type="submit" className="btn-lg">
                             Submit
                         </Button>

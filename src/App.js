@@ -18,8 +18,9 @@ function App() {
 
   return (
     <div className="App">
-      <TopPart menuItem={(i) => setMenuItem(i)} />
       <AuthProvider>
+      <TopPart menuItem={(i) => setMenuItem(i)} />
+
         {menuItem === "home" && <Home />}
         {menuItem === "register" && <Register />}
         {menuItem === "login" && <Login />}

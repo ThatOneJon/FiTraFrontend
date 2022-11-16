@@ -1,13 +1,15 @@
-import React from "react"
+import React, {useContext} from "react"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import AuthContext from '../context/authContext';
 
 
 
 
 
 export default function TopPart(props){
+  let {user} = useContext(AuthContext)
 
     return(
             <Navbar className ="customNav py-4" bg="dark" expand="md" variant="dark">
@@ -19,8 +21,11 @@ export default function TopPart(props){
                   <Nav className="me-auto customNavToo justify-content-evenly ml-5" style={{width: "80%"}}>
                     <Nav.Link href="#home" onClick={()=>props.menuItem("home")}>Home</Nav.Link>
                     <Nav.Link href="#contact" onClick={()=>props.menuItem("unt")}>Contact</Nav.Link>
-                    <Nav.Link href="#register" onClick={()=>props.menuItem("register")}>Register</Nav.Link>
-                    <Nav.Link href="#login" onClick={()=>props.menuItem("login")}>Login</Nav.Link>
+                    {user ? 
+                      <> <Nav.Link href="#login" onClick="#">Logout</Nav.Link> <Nav.Link style={{color:"white"}}> Welcome, {user.username}</Nav.Link> </> 
+                      : 
+                      <>  <Nav.Link href="#register" onClick={()=>props.menuItem("register")}>Register</Nav.Link>
+                    <Nav.Link href="#login" onClick={()=>props.menuItem("login")}>Login</Nav.Link> </>}
                   </Nav>
                 </Navbar.Collapse>
               </Container>

@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <AuthProvider>
       <TopPart menuItem={(i) => setMenuItem(i)} />
-
+        {menuItem === "addWorkout" && <AddWorkout />}
         {menuItem === "home" && <Home />}
         {menuItem === "register" && <Register />}
         {menuItem === "login" && <Login />}

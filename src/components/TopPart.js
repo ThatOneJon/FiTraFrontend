@@ -9,7 +9,7 @@ import AuthContext from '../context/authContext';
 
 
 export default function TopPart(props){
-  let {user} = useContext(AuthContext)
+  let {user, logoutUser} = useContext(AuthContext)
 
     return(
             <Navbar className ="customNav py-4" bg="dark" expand="md" variant="dark">
@@ -22,7 +22,12 @@ export default function TopPart(props){
                     <Nav.Link href="#home" onClick={()=>props.menuItem("home")}>Home</Nav.Link>
                     <Nav.Link href="#contact" onClick={()=>props.menuItem("unt")}>Contact</Nav.Link>
                     {user ? 
-                      <> <Nav.Link href="#login" onClick="#">Logout</Nav.Link> <Nav.Link style={{color:"white"}}> Welcome, {user.username}</Nav.Link> </> 
+                      <>
+                        <Nav.Link href="#AddWorkout" onClick={()=> props.menuItem("addWorkout")}>Add Workout</Nav.Link> 
+                        <Nav.Link href="#login" onClick={logoutUser}>Logout</Nav.Link> 
+                        <Nav.Link style={{color:"white"}}> Welcome, {user.username}</Nav.Link> 
+                      
+                      </> 
                       : 
                       <>  <Nav.Link href="#register" onClick={()=>props.menuItem("register")}>Register</Nav.Link>
                     <Nav.Link href="#login" onClick={()=>props.menuItem("login")}>Login</Nav.Link> </>}

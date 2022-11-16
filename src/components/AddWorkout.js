@@ -15,7 +15,7 @@ export default function AddWorkout(){
             <Row className="text-center mt-5 mb-3">
                 <h1>Placeholder for Add new Workout</h1>
             </Row>
-            <Row style={{backgroundColor: "grey"}} className="mt-5">
+            <Row  className="mt-5">
                 <Col lg ={3}></Col>
                 <Col className ="d-flex flex-column justify-content-center text-center p-5" style={{backgroundColor: "white", border:"3px solid black", borderRadius:"10px"}}>
                         <Form.Group className="mb-3" controlId="dateWorkout">
